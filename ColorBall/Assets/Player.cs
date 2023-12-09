@@ -14,16 +14,20 @@ public class Player : MonoBehaviour
 
     [SerializeField] private Color colorCam, colorSari, colorPembe, colorEflatun;
 
-    [SerializeField] Text _score;
-    private float scoreValue;
+    [SerializeField] Text _score,panelScore , highScore;
+    private int scoreValue, panelValue;
 
-    [SerializeField] GameObject bir, iki, uc, dort;
+    [SerializeField] GameObject bir, iki, uc, dort, panel;
+
+    [SerializeField] AudioSource audioSource;
 
     private void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
         _rb.bodyType = RigidbodyType2D.Kinematic;
         _sr = GetComponent<SpriteRenderer>();
+        panel.SetActive(false);
+        highScore.text = PlayerPrefs.GetInt("HinghScore",0).ToString();
         RandomColor();
     }
 
@@ -34,6 +38,8 @@ public class Player : MonoBehaviour
         {
             _rb.velocity = Vector2.up * _jump;
             _rb.bodyType = RigidbodyType2D.Dynamic;
+            audioSource.Play();
+
         }
     }
 
@@ -44,6 +50,13 @@ public class Player : MonoBehaviour
             bir.transform.position = transform.position + new Vector3(0f, 15f, 0f);
             collision.gameObject.transform.position = bir.transform.position + new Vector3(0f, 2f, 0f);
             scoreValue++;
+            panelValue++;
+            panelScore.text = panelValue.ToString();
+            if (panelValue > PlayerPrefs.GetInt("HinghScore", 0))
+            {
+                PlayerPrefs.SetInt("HinghScore", panelValue);
+                highScore.text = panelScore.ToString(); ;
+            }
             RandomColor();
             return;
         }
@@ -52,6 +65,13 @@ public class Player : MonoBehaviour
             iki.transform.position = transform.position + new Vector3(0f, 15f, 0f);
             collision.gameObject.transform.position = iki.transform.position + new Vector3(0f, 2f, 0f);
             scoreValue++;
+            panelValue++;
+            panelScore.text = panelValue.ToString();
+            if (panelValue > PlayerPrefs.GetInt("HinghScore", 0))
+            {
+                PlayerPrefs.SetInt("HinghScore", panelValue);
+                highScore.text = panelScore.ToString(); ;
+            }
             RandomColor();
             return;
         }
@@ -61,12 +81,21 @@ public class Player : MonoBehaviour
             dort.transform.position = transform.position + new Vector3(0f, 15f, 0f);
             collision.gameObject.transform.position = uc.transform.position + new Vector3(0f, 2f, 0f);
             scoreValue++;
+            panelValue++;
+            panelScore.text = panelValue.ToString();
+            if(panelValue > PlayerPrefs.GetInt("HinghScore", 0))
+            {
+                PlayerPrefs.SetInt("HinghScore", panelValue);
+                highScore.text = panelValue.ToString(); ;
+            }
             RandomColor();
             return;
         }
         if (collision.tag != currentColor)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            panel.SetActive(true);
+            Time.timeScale = 0f;
         }
     }
     void RandomColor()
