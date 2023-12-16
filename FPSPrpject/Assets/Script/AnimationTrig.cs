@@ -17,12 +17,12 @@ public class AnimationTrig : MonoBehaviour
         {
             AudioSource silahSesi = GetComponent<AudioSource>();
             silahSesi.Play();
-            _animator.SetBool("trigger", true);
+            _animator.SetBool("Trigger", true);
             Mermi._cephane -= 1;
         }
         else
         {
-            _animator.SetBool("trigger", false);
+            _animator.SetBool("Trigger", false);
         }
     }
 }

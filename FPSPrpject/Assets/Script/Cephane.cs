@@ -8,6 +8,7 @@ public class Cephane : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if(other.gameObject.tag == "Player") { 
         _ses.Play();
         if (Mermi._cephane == 0)
         {
@@ -19,6 +20,7 @@ public class Cephane : MonoBehaviour
             Mermi.yCephane += 10;
             this.gameObject.SetActive(false);
 
+        }
         }
     }
 }

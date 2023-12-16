@@ -61,7 +61,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: trigger
+    m_ConditionEvent: Trigger
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 2628361635537566924}
@@ -138,7 +138,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: trigger
+    m_ConditionEvent: Trigger
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -6627214012315357246}
@@ -163,7 +163,7 @@ AnimatorController:
   m_Name: M9
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: trigger
+  - m_Name: Trigger
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0

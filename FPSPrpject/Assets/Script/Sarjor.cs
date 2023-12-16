@@ -32,13 +32,12 @@ public class Sarjor : MonoBehaviour
         {
             trigger.GetComponent<AtesEtme>().enabled = false;
             mermi.GetComponent<Mermi>().enabled = false;
-            _animator.SetBool("trigger", false);
+            _animator.SetBool("Trigger", false);
         }
         else
         {
             trigger.GetComponent<AtesEtme>().enabled = true;
             mermi.GetComponent<Mermi>().enabled = true;
-            _animator.SetBool("trigger", true);
         }
         if (Input.GetButtonDown("Sarjor"))
         {
