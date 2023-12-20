@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1170176698744618658}
   - component: {fileID: 5313125393285593662}
+  - component: {fileID: 4146021999716922198}
+  - component: {fileID: -8223937736433391703}
   m_Layer: 0
   m_Name: black_king
   m_TagString: Untagged
@@ -84,3 +86,74 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &4146021999716922198
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 839612759040489981}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.2, y: 0.2}
+    newSize: {x: 0.2, y: 0.2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.2, y: 0.2}
+  m_EdgeRadius: 0
+--- !u!114 &-8223937736433391703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 839612759040489981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00362d381a7b4fb4a8f6406c5cfaef7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _controller: {fileID: 0}
+  _hareket: {fileID: 6607354332657713712, guid: bc918df2abc10394da1c7280c315b68b, type: 3}
+  siyah_sah: {fileID: 21300000, guid: 1c460aa0afb09e944872966f1e6de3f0, type: 3}
+  siyah_vezir: {fileID: 21300000, guid: e00660e8e0493004299b72ad0cab0055, type: 3}
+  siyah_at: {fileID: 21300000, guid: fd3f6b3f21cce884aa0a8df8c06b00c5, type: 3}
+  siyah_kale: {fileID: 21300000, guid: 3fa26cce15d205944b6e9da3cecf37f1, type: 3}
+  siyah_fil: {fileID: 21300000, guid: 4b579ae896da350469779577e2b520de, type: 3}
+  siyah_piyon: {fileID: 21300000, guid: 4d1854591994fcc4e9d971a2edf7a555, type: 3}
+  beyaz_sah: {fileID: 21300000, guid: 97b0cc69496236d4abb35cafc6e963b0, type: 3}
+  beyaz_vezir: {fileID: 21300000, guid: ed0d0777698e549478ca9a402720d133, type: 3}
+  beyaz_at: {fileID: 21300000, guid: e901e942221030f469b7d9b0bffaf6cf, type: 3}
+  beyaz_kale: {fileID: 21300000, guid: 322a73955bf657248ad4a33025b9c040, type: 3}
+  beyaz_fil: {fileID: 21300000, guid: 3ccd7380950082a4088762c907def72c, type: 3}
+  beyaz_piyon: {fileID: 21300000, guid: 26dfc81e62fc12b4988c0270ba50c52f, type: 3}
